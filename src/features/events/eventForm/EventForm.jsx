@@ -5,12 +5,10 @@ import { Button, Form, Header, Segment } from "semantic-ui-react";
 export default function EventForm({
   setFormOpen,
   setEvents,
-  createEvent,
+  handleCreateEvent,
   selectedEvent,
-  updateEvent,
+  handleUpdateEvent,
 }) {
-  console.log('selectedEventValues', selectedEvent);
-
   const initialValues = selectedEvent ?? {
     title: "",
     category: "",
@@ -19,14 +17,13 @@ export default function EventForm({
     venue: "",
     date: "",
   };
-  
-  const [values, setValues] = useState(initialValues);
-  
-  function handleFormSubmit() {
 
+  const [values, setValues] = useState(initialValues);
+
+  function handleFormSubmit() {
     selectedEvent
-      ? updateEvent({ ...selectedEvent, ...values })
-      : createEvent({
+      ? handleUpdateEvent({ ...selectedEvent, ...values })
+      : handleCreateEvent({
           ...values,
           id: cuid(),
           hotedBy: "Bob",
