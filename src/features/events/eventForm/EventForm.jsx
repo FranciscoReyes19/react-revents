@@ -36,7 +36,7 @@ export default function EventForm({
 
   function handleInputChange(e) {
     const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
+    setValues({ ...values, [name]:  value });
   }
 
   return (
