@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Grid } from "semantic-ui-react";
 // import EventForm from "../eventForm/EventForm";
 import EventList from "./EventList";
-import { sampleData } from "../../../app/api/sampleData";
+import { sampleApiData } from "../../../app/api/sampleData";
 
 const EventDashboard = () => {
-  const [events, setEvents] = useState(sampleData);
+  const [events, setEvents] = useState(sampleApiData);
 
   function handleDeleteEvent(eventId) {
-    setEvents(events.filter((item) => item.id !== eventId));
+    setEvents(events.filter(item => item.id !== eventId));
   }
 
   //using key to re-create a form when props are changed (solve update form)

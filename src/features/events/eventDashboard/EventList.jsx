@@ -4,7 +4,7 @@ import EventListItem from "./EventListItem";
 export default function EventList({
   events,
   handleSelectEvent,
-  handleDeleteEvent,
+  handleDeleteEvent
 }) {
   return (
     <>

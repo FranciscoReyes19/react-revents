@@ -21,16 +21,16 @@ export default function NavBar() {
           Re-events
         </Menu.Item>
         <Menu.Item as={NavLink} to='/events' name='Events'></Menu.Item>
-        {authenticated && (
+        <Menu.Item as={NavLink} to='/sandbox' name='Sandbox'></Menu.Item>
+        { authenticated && (
           <Menu.Item as={NavLink} to='/createEvent'>
             <Button positive inverted content='Create Event' />
           </Menu.Item>
         )}
-        {authenticated ? (
-          <SignedInMenu signOut={handleSignOut} />
-        ) : (
-          <SignedOutMenu setAuthenticated={setAuthenticated} />
-        )}
+        { authenticated 
+            ? ( <SignedInMenu signOut={handleSignOut} />) 
+            : ( <SignedOutMenu setAuthenticated={setAuthenticated} />)
+        }
       </Container>
     </Menu>
   );

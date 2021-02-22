@@ -1,4 +1,4 @@
-export const sampleData = [
+export const sampleApiData = [
     {
         id: '1',
         title: 'Trip to Empire State building',
@@ -17,6 +17,11 @@ export const sampleData = [
             },
             {
                 id: 'b',
+                name: 'Tom',
+                photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
+            },
+            {
+                id: 'c',
                 name: 'Tom',
                 photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
             }
